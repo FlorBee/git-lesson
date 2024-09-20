@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Wrap - My Hobby</title>
+  </head>
+  <style>
+    body {
+      background: linear-gradient(
+        -225deg,
+        #5d9fff 0%,
+        #b8dcff 48%,
+        #6bbbff 100%
+      );
+    }
+    h1 {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 39px;
+    }
+    h2 {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-style: italic;
+    }
+    img {
+      max-width: 100%;
+    }
+
+    .content {
+      max-width: 600px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px auto;
+    }
+    p {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+      font-size: 18px;
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+      border: 1px solid #0092ca;
+      background: #0092ca;
+      color: black;
+      border-radius: 10px;
+      padding: 10px 15px;
+      transition: all 200ms ease-in-out;
+    }
+    button:hover {
+      background-color: white;
+      color: black;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: larger;
+    }
+    .coder {
+      text-decoration: underline;
+    }
+    .dark-theme {
+      color: white;
+      background: black;
+      display: block;
+      margin: 0 auto;
+      border: 1px solid white;
+      border-radius: 10px;
+      padding: 10px 15px;
+      transition: all 200ms ease-in-out;
+    }
+    .dark-theme:hover {
+      background: white;
+      color: black;
+    }
+    .wrap-first-pic {
+      border-radius: 10px;
+      transition: all 150ms ease-in-out;
+    }
+    .wrap-first-pic:hover {
+      filter: contrast(80%);
+      transform: scale(1.1);
+    }
+    .grids {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 15px;
+      margin: 15px 0;
+    }
+    .grids img {
+      width: 100%;
+      border-radius: 8px;
+      transition: all 150ms ease-in-out;
+    }
+    .grids img:hover {
+      transform: scale(2);
+    }
+    .dark {
+      background: linear-gradient(
+        89.7deg,
+        rgb(0, 0, 0) -10.7%,
+        rgb(53, 92, 125) 88.8%
+      );
+      color: white;
+    }
+    .dark .content {
+      background: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+    }
+    .dark a {
+      color: #0092ca;
+    }
+  </style>
+  <body>
+    <button id="dark-theme" class="dark-theme">Dark theme</button>
+    <div class="content">
+      <h1>Vehicle-Wrap Enthusiast</h1>
+      <h2>Wrap, Smile and Drive in Style!</h2>
+
+      <a
+        href="https://en.wikipedia.org/wiki/Vehicle_vinyl_wrap"
+        target="_blank"
+      >
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/138/364/original/Carwrap1.jpeg?1723312468"
+          alt=""
+          class="wrap-first-pic"
+        />
+      </a>
+      <div class="grids">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/138/369/original/Carwrap3...jpg?1723313353"
+          alt=""
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/138/370/original/Carwrap2...jpg?1723313533"
+          alt=""
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/138/371/original/Carwrap4...jpg?1723313552"
+          alt=""
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/138/372/original/Carwrap5...jpg?1723313574"
+          alt=""
+        />
+      </div>
+      <p>
+        Car wrap refers to a large vinyl graphic that is applied to the surface
+        of a vehicle. It's a popular way to change the appearance of a car
+        without resorting to a permanent paint job. Car wraps can be used for
+        aesthetic purposes, like changing the color or adding custom designs, or
+        for advertising, where businesses use wraps to display logos and
+        promotional messages. The process involves applying a flexible vinyl
+        film over the vehicle’s original paint.To learn more about car wrap
+        please:
+        <br />
+        <a
+          href="https://en.wikipedia.org/wiki/Vehicle_vinyl_wrap"
+          target="_blank"
+          >visit wikipedia</a
+        >
+      </p>
+
+      <button id="button2">Get a free quote!</button>
+    </div>
+    <footer>Coded by <span class="coder">Buhle Buthelezi</span></footer>
+    <script>
+      function darkTheme() {
+        let body = document.querySelector("body");
+        //body.classList.toggle("dark");
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+      var btn1 = document.getElementById("dark-theme");
+      btn1.addEventListener("click", darkTheme);
+
+      function freeQuote() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        let carWrap = prompt("Do you have a car that you want to wrap?");
+        if (carWrap === "Yes") {
+          alert(
+            "Hi " +
+              name +
+              ", we look forward to wraping your car, you will recieve an email shorty, thank you!😊"
+          );
+        } else {
+          alert(
+            "Hi " +
+              name +
+              ", unfortunately you will need to have a car in order to get a free quote, apologies!☹️"
+          );
+        }
+      }
+
+      var btn2 = document.getElementById("button2");
+      btn2.addEventListener("click", freeQuote);
+      {
+        //code to perform action for button 2
+      }
+    </script>
+  </body>
+</html>
